@@ -1,7 +1,11 @@
 package com.consultacarros.consumoapi.main;
 
+import com.consultacarros.consumoapi.models.Marca;
 import com.consultacarros.consumoapi.service.ConsumoAPI;
+import com.consultacarros.consumoapi.service.ConverteDados;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -9,6 +13,7 @@ public class Main {
 
     Scanner scanner = new Scanner(System.in);
     ConsumoAPI consumoAPI = new ConsumoAPI();
+    private  ConverteDados converte = new ConverteDados();
 
     public void exibirMenu(){
 
@@ -20,7 +25,9 @@ public class Main {
 
         String json = consumoAPI.obterDados(ENDERECO + tipoAutomovel + "/marcas/");
 
-        System.out.println(json);
+
+        List<Marca> marcas = converte.converteLista(json, Marca.class);
+        System.out.println(marcas);
 
 
     }
