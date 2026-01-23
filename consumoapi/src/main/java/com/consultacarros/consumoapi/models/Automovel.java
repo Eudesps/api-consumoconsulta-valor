@@ -6,6 +6,6 @@ public record Automovel(String codigo,String nome){
     @Override
     public String toString() {
         return "Código: " + codigo +
-                "| Nome: " + nome + "\n";
+                " | Nome: " + nome;
     }
 }

@@ -27,7 +27,7 @@ public class Main {
         var tipoAutomovel = scanner.next().toLowerCase();
         String jsonMarca = consumoAPI.obterDados(URL_BASE + tipoAutomovel + "/marcas/");
         List<Automovel> marcas = converte.obterLista(jsonMarca, Automovel.class );
-        System.out.println(marcas);
+        marcas.forEach(System.out::println);
 
         //SEGUNDO PASSO
         System.out.println("Informe o código da marca para consulta: ");
@@ -36,7 +36,7 @@ public class Main {
         String jsonCodigoMarca = consumoAPI.obterDados(URL_BASE + tipoAutomovel + "/marcas/" + codigoMarca + "/modelos");
 
        var automovels = converte.converteDados(jsonCodigoMarca, Modelos.class);
-       System.out.println(automovels);
+       automovels.modelos().forEach(System.out::println);
 
     }
 }
