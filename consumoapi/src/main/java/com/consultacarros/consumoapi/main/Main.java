@@ -24,19 +24,33 @@ public class Main {
                 "*** Escolha o se é \"carros\", \"motos\" ou \"caminhoes\" ***");
 
         //
+        var jsonConsulta = "";
         var tipoAutomovel = scanner.next().toLowerCase();
-        String jsonMarca = consumoAPI.obterDados(URL_BASE + tipoAutomovel + "/marcas/");
-        List<Automovel> marcas = converte.obterLista(jsonMarca, Automovel.class );
+        jsonConsulta = consumoAPI.obterDados(URL_BASE + tipoAutomovel + "/marcas/");
+        List<Automovel> marcas = converte.obterLista(jsonConsulta, Automovel.class );
         marcas.forEach(System.out::println);
 
         //SEGUNDO PASSO
         System.out.println("Informe o código da marca para consulta: ");
         var codigoMarca = scanner.next();
 
-        String jsonCodigoMarca = consumoAPI.obterDados(URL_BASE + tipoAutomovel + "/marcas/" + codigoMarca + "/modelos");
+        jsonConsulta = consumoAPI.obterDados(URL_BASE + tipoAutomovel + "/marcas/" + codigoMarca + "/modelos");
 
-       var automovels = converte.converteDados(jsonCodigoMarca, Modelos.class);
-       automovels.modelos().forEach(System.out::println);
+        var automovels = converte.converteDados(jsonConsulta, Modelos.class);
+        automovels.modelos().forEach(System.out::println);
+
+        //TERCEIRO PASSO
+        System.out.println("Digite o código do modelo desejado: ");
+        var codigoModelo = scanner.next();
+        jsonConsulta = consumoAPI.obterDados(URL_BASE + tipoAutomovel + "/marcas/" + codigoMarca
+                + "/modelos/" + codigoModelo + "/anos");
+
+        var modelos = converte.obterLista(jsonConsulta, Automovel.class);
+
+        modelos.forEach(e -> System.out.println(consumoAPI.obterDados(URL_BASE + tipoAutomovel + "/marcas/" + codigoMarca
+                + "/modelos/" + codigoModelo + "/anos/" + e.codigo())));
+        //System.out.println(modelos);
+
 
     }
 }
