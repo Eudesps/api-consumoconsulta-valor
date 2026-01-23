@@ -6,9 +6,7 @@ import com.consultacarros.consumoapi.service.ConsumoAPI;
 import com.consultacarros.consumoapi.service.ConverteDados;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class Main {
     private final String URL_BASE = "https://parallelum.com.br/fipe/api/v1/";
