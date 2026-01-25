@@ -21,7 +21,7 @@ public class Main {
                 "INFORMAÇÕES SOBRE O PREÇO MÉDIO DE AUTOMÓVEIS \n" +
                 "*** Escolha o se é \"carros\", \"motos\" ou \"caminhoes\" ***");
 
-        //
+        //PRIMEIRO PASSO
         var jsonConsulta = "";
         var tipoAutomovel = scanner.next().toLowerCase();
         jsonConsulta = consumoAPI.obterDados(URL_BASE + tipoAutomovel + "/marcas/");
@@ -47,7 +47,6 @@ public class Main {
 
         modelos.forEach(e -> System.out.println(consumoAPI.obterDados(URL_BASE + tipoAutomovel + "/marcas/" + codigoMarca
                 + "/modelos/" + codigoModelo + "/anos/" + e.codigo())));
-        //System.out.println(modelos);
 
 
     }
