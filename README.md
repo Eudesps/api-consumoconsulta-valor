@@ -36,4 +36,4 @@ A aplicação utiliza os seguintes endpoints base:
 * `https://parallelum.com.br/fipe/api/v1/carros/marcas/{COD_MARCA}/modelos/{COD_MODELO}/anos`
 
 ---
-Desenvolvido como parte do aprendizado em Java. Sinta-se à vontade para conectar-se comigo no **LinkedIn**!!
+Desenvolvido como parte do aprendizado em Java.
