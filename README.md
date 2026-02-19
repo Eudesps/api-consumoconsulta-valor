@@ -22,10 +22,10 @@ A aplicação guia o usuário através de um fluxo interativo no console:
 ---
 
 ## Tecnologias Utilizadas
-* **Java 21**.
-* **Spring Boot:** Estrutura base do projeto.
-* **Jackson:** Para o mapeamento dos dados JSON.
-* **API FIPE:** Serviço gratuito de consulta (HTTP REST).
+* **Java 21**
+* **Spring Boot:** Estrutura base do projeto
+* **Jackson:** Para o mapeamento dos dados JSON
+* **API FIPE:** Serviço gratuito de consulta (HTTP REST)
 
 ---
 
