@@ -5,9 +5,9 @@ Este projeto é uma ferramenta de linha de comando desenvolvida como desafio pr�
 ## Objetivo
 O foco principal é consolidar conhecimentos em:
 * **Consumo de APIs REST** (HttpClient).
-* **Desserialização de JSON** com a biblioteca Jackson.
-* **Java Streams e Lambdas** para filtragem e manipulação de dados.
-* **Modelagem de dados** seguindo os princípios de Programação Orientada a Objetos.
+* **Desserialização de JSON**, com a biblioteca Jackson.
+* **Java Streams e Lambdas**, para filtragem e manipulação de dados.
+* **Modelagem de dados**, seguindo os princípios de Programação Orientada a Objetos.
 
 ---
 
